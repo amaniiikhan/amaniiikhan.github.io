@@ -106,3 +106,10 @@ form .submit:hover{
     background-color: hsl(68, 15%, 69%);
     color: #000;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }

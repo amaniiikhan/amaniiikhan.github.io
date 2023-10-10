@@ -2,19 +2,27 @@
 <head>
         <title>PK Art Collective & Gallery</title> 
         <link rel="stylesheet" href="style.css">
+        <style>
+            iframe[iframetag] {
+               border: none;
+            }
+         </style>
 </head>
 <body>
     <div class="container">
         <div class="menu">
             <ul>
-                <li class="logo"><img src="images/dark-logo.png"</li>
+                <li class="logo"><img src="images/new-logo.png"</li>
                 <li>Catalog</li>
                 <a href="Contact-us.html"><li>Contact Us</li></a>
             </ul>
         </div>
         <div class="catalog">
-            <h1>Catalog</h1>
-            <embed src="catalog.pdf" width="700" height="375">
+            <div id="iframeDiv">
+                <iframe width="100%" height="100%" src="catalog.html" iframetag></iframe>
+             </div>
+            
+            
     </div>
 
 </body>
