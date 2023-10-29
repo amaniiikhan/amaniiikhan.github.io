@@ -21,13 +21,26 @@
                     <form id="contact-form" method="post" action="contact-form.php">
                     <input name="name" type="text" class="form-control" placeholder="Your Name" required><br>
                     <input name="email" type="email" class="form-control" placeholder="Your Email" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" required><br>
+                    <input id="subject" name="subject" type="text" class="form-control" placeholder="Subject" required><br>
                         <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
                         <input type="submit" class="form-control submit" value="SEND MESSAGE">
                     </form>
                         </div>
                     
-
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var urlParams = new URLSearchParams(window.location.search);
+                                var subject = urlParams.get('subject');
+                    
+                                if (subject) {
+                                    // Fill in the subject field with the value from the URL
+                                    var subjectField = document.getElementById('subject');
+                                    if (subjectField) {
+                                        subjectField.value = subject;
+                                    }
+                                }
+                            });
+                        </script>
                 
                 <div class="contact-right">
                     <h3>Reach us</h3>

@@ -2,13 +2,14 @@
 <head>
         <title>PK Art Collective & Gallery</title> 
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
             iframe[iframetag] {
                border: none;
             }
          </style>
 </head>
-<body>
+<body style="max-width: 100%;">
     <div class="container">
         <div class="menu">
             <ul>
@@ -17,6 +18,16 @@
                 <a href="Contact-us.html"><li>Contact Us</li></a>
             </ul>
         </div>
+        
+
+    <script>
+        function redirectToContactPage(subject) {
+            // Redirect to the "contact.html" page with the subject parameter
+
+            // Set the subject value within the "contact-form" div
+            window.location.href = 'Contact-us.html?subject=' + encodeURIComponent(subject);
+        }
+    </script>
         <div class="catalog">
             <div id="iframeDiv">
                 <iframe width="100%" height="100%" src="catalog.html" iframetag></iframe>

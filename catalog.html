@@ -2,7 +2,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
 <title>An Eye for Beauty </title>
 <style>
@@ -20,18 +20,27 @@
 </style>
 
 
+
 </head>
 
+<body style="max-width: 100%; overflow-x:hidden;">
 
-<body style="overflow-x:hidden;">
+    <script>
+        function redirectToContactPage(subject) {
+            // Redirect to the "contact.html" page with the subject parameter
 
-
+            // Set the subject value within the "contact-form" div
+            window.parent.location.href = 'Contact-us.html?subject=' + encodeURIComponent(subject);
+        }
+    </script>
+    
 
     <span><img alt="image" src="Catalog_files/Image_001.jpg" class="center" style="max-width: 20%; justify-content: center;"/></span></p><p style="text-indent: 0pt;text-align: left;"><br/></p>
 
     <header class="center" style="padding-top: 20pt;padding-left: 0pt;text-indent: 0pt;text-align: center; font-size: 20pt;">An Eye for Beauty</p>
 
     <p class="center" style="padding-top: 10pt;padding-left: 0pt;text-indent: 0pt;text-align: center; font-size: 15pt;">Catalogue</p>
+
     
     <div class="intro">
     <p style="padding-top: 30pt; padding-left: 0pt;text-indent: 0pt;line-height: 145%; text-align: center;">Beauty transcends norms, convention and predictability. Whilst the brain lights up when we view art we enjoy, people will be moved by different things. Artists often have a way of creating images that unexpectedly evoke a sense of pleasure. Emerging brain research proves what artists and art lovers have sensed all along: Art can make us feel better. You don’t need to be a brain scientist to understand that the arts have physiological, psychological, and spiritual beneﬁts.</p>
@@ -116,26 +125,9 @@
     
         <div class="art-right">
             <p style="line-height: 1.5;">“Al Raheem”<br>70,000<br>14.5x10.5 inches<br>Gouache, watercolour, tea stained paper</p>
-            <button id="btn" style="margin-left: -70px;">Send an Inquiry</button>
-            <script>
-                btn.addEventListener('click', () => {var x = document.getElementById("contact-form2");
-                      if (x.style.visibility === "hidden") {
-                        x.style.visibility = "visible";
-                      } else {
-                        x.style.visibility = "hidden";
-                      }})
-            </script>
-               
-                <form id="contact-form2" method="post" action="contact-form.php" style="visibility: hidden; margin-left:-65px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;" required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-15px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="Al Raheem - Sohni Farrukh" style="margin-top:-15px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Al Raheem - Sohni Farrukh')">Send an Inquiry</button>
             
-               
-                
+              
                 </div>
                 
             </div>
@@ -149,58 +141,25 @@
         <div class="art-right">
             <p style="line-height: 1.5; margin-top: -40px;">“Roshni”<br>50,000 <br>12x16 inches<br>Gouache and gold pigments on wasli paper</p>
             
-                <button id="btn2" style="margin-left: -70px;">Send an Inquiry</button>
-    
-                    <script>
-                     btn2.addEventListener('click', () => {var x = document.getElementById("contact-form1");
-                      if (x.style.visibility === "hidden") {
-                        x.style.visibility = "visible";
-                      } else {
-                        x.style.visibility = "hidden";
-                      }})
-                    </script>
-       
-                <form id="contact-form1" method="post" action="contact-form.php" style="visibility: hidden; margin-left: -50px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;"required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-10px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="Roshni - Sohni Farrukh" style="margin-top:-10px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Roshni - Sohni Farrukh')">Send an Inquiry</button>
                 
             </div>
     </div>  
     
-    <div class="art-box" style="margin-top: -50px; margin-right: -250px;">
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
         <div class="art-left">
-            <p><span><img width="257" height="248" alt="image" src="Catalog_files/Image_004.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            <p><span><img width="257" height="248" alt="image" src="Catalog_files/Image_004.jpg" style="margin-left: -100px; margin-top: -40px;"/></span></p>
             </div>
     
         <div class="art-right" style="margin-left: -70px;">
             <p style="line-height: 1.5; margin-top: -40px;">“Chaonn ki talash mai”<br>70,000 <br>15.5x15.5 inches<br>Gouache,gold pigment on archival paper</p>
             
-            <button id="btn3" style="margin-left: -70px;">Send an Inquiry</button>
-    
-            <script>
-             btn3.addEventListener('click', () => {var x = document.getElementById("contact-form3");
-              if (x.style.visibility === "hidden") {
-                x.style.visibility = "visible";
-              } else {
-                x.style.visibility = "hidden";
-              }})
-            </script>
-                <form id="contact-form3" method="post" action="contact-form.php" style="visibility: hidden; margin-left: -70px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;" required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-15px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="Chaonn ki talash mai - Sohni Farrukh" style="margin-top:-15px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Chaonn ki talash mai - Sohni Farrukh')">Send an Inquiry</button>
                 
             </div>
     </div>  
     
-    <div class="art-box" style="margin-top: -75px; margin-right: -250px;">
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
         <div class="art-left">
             <p><span><img width="257" height="322" alt="image" src="Catalog_files/Image_005.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
             </div>
@@ -208,30 +167,13 @@
         <div class="art-right" style="margin-left: -70px;">
             <p style="line-height: 1.5; margin-top: -40px;">“Shamsa”<br>68,000 <br>18x18 inches<br>Gouache,gold pigment on archival paper</p>
              
-            <button id="btn4" style="margin-left: -70px;">Send an Inquiry</button>
-    
-            <script>
-             btn4.addEventListener('click', () => {var x = document.getElementById("contact-form4");
-              if (x.style.visibility === "hidden") {
-                x.style.visibility = "visible";
-              } else {
-                x.style.visibility = "hidden";
-              }})
-            </script>
-
-                <form id="contact-form4" method="post" action="contact-form.php" style="visibility: hidden; margin-left: -70px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;" required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-15px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="Shamsa - Sohni Farrukh" style="margin-top:-15px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Shamsa - Sohni Farrukh')">Send an Inquiry</button>
                 
             </div>
     </div>  
     
 
-    <div class="art-box" style="margin-top: -30px; margin-right: -250px;">
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
         <div class="art-left">
             <p><span><img width="257" height="322" alt="image" src="Catalog_files/Image_006.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
             </div>
@@ -247,7 +189,7 @@
     <header style="padding-top: 50px;padding-left: 0pt;text-indent: 0pt;text-align: left;">Qazi Shahryar</header>
 
 
-    <div class="art-box" style="margin-top: 30px; margin-right: -250px;">
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
         <div class="art-left">
             <p><span><img width="245" height="329" alt="image" src="Catalog_files/Image_007.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
             </div>
@@ -255,83 +197,238 @@
         <div class="art-right" style="margin-left: -70px;">
             <p style="line-height: 1.5; margin-top: -40px;">“I know you’re tired, but come, this is the way”<br>50,000 <br>18x34 inches<br>Acrylic on canvas</p>
             
-            <button id="btn6" style="margin-left: -70px;">Send an Inquiry</button>
-    
-            <script>
-                    btn6.addEventListener('click', () => {var x = document.getElementById("contact-form6");
-                    if (x.style.visibility === "hidden") {
-                        x.style.visibility = "visible";
-                    } else {
-                        x.style.visibility = "hidden";
-                    }})
-            </script>
-
-                <form id="contact-form6" method="post" action="contact-form.php" style="visibility: hidden; margin-left: -70px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;" required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-15px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="I know you’re tired, but come, this is the way - Qazi Shahryar" style="margin-top:-15px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('I know you’re tired, but come, this is the way - Qazi Shahryar')">Send an Inquiry</button>
                 
             </div>
     </div>
 
 
-    <div class="art-box" style="margin-top: 30px; margin-right: -250px;">
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
         <div class="art-left">
-            <p><span><img width="245" height="329" alt="image" src="Catalog_files/Image_007.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            <p><span><img width="256" height="439" alt="image" src="Catalog_files/Image_008.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
             </div>
     
         <div class="art-right" style="margin-left: -70px;">
             <p style="line-height: 1.5; margin-top: -40px;">“Scrutiny 31.0”<br>60,000 <br>18x32 inches<br>Acrylic on canvas</p>
             
-            <button id="btn6" style="margin-left: -70px;">Send an Inquiry</button>
-    
-            <script>
-                    btn6.addEventListener('click', () => {var x = document.getElementById("contact-form6");
-                    if (x.style.visibility === "hidden") {
-                        x.style.visibility = "visible";
-                    } else {
-                        x.style.visibility = "hidden";
-                    }})
-            </script>
-
-                <form id="contact-form6" method="post" action="contact-form.php" style="visibility: hidden; margin-left: -70px;">
-                    <input name="name" type="text" class="form-control" placeholder="Your Name" style="margin-top:-15px;" required><br>
-                    <input name="email" type="email" class="form-control" placeholder="Your Email" style="margin-top:-15px;" required><br>
-                    <input name="subject" type="text" class="form-control" placeholder="Subject" value="I know you’re tired, but come, this is the way - Qazi Shahryar" style="margin-top:-15px;" required><br>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
-                        <input type="submit" class="form-control submit" value="SEND MESSAGE" style="margin-top: -15px;">
-                    </form>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Scrutiny 31.0 - Qazi Shahryar')">Send an Inquiry</button>
                 
             </div>
     </div>
 
 
 
-<p style="text-indent: 0pt;text-align: left;">
-<span><img width="256" height="439" alt="image" src="Catalog_files/Image_008.jpg"/></span>
-</p>
-<p style="padding-top: 10pt;padding-left: 224pt;text-indent: 0pt;text-align: left;">“Scrutiny 31.0”</p>
-<p style="padding-top: 1pt;padding-left: 224pt;text-indent: 0pt;text-align: left;">60,000</p>
-<p style="padding-top: 1pt;padding-left: 224pt;text-indent: 0pt;line-height: 112%;text-align: left;">18x32 inches Acrylic on canvas</p><p style="text-indent: 0pt;text-align: left;"><span><img width="296" height="366" alt="image" src="Catalog_files/Image_009.jpg"/></span></p>
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img width="257" height="322" alt="image" src="Catalog_files/Image_009.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: -70px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Scrutiny 29.0”<br>50,000 <br>19.5x23.5 inches<br>Acrylic on canvas</p>
+            
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Scrutiny 29.0 - Qazi Shahryar')">Send an Inquiry</button>
+        </div> 
+    </div>
+
+    <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img  alt="image" src="Catalog_files/Image_010.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: -70px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Scrutiny 31.0”<br>50,000 <br>18x32 inches<br>Acrylic on canvas</p>
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Scrutiny 31.0 - Qazi Shahryar')">Send an Inquiry</button>
+            
+                        </div> 
+                    </div>
 
 
-<p style="padding-top: 4pt;padding-left: 253pt;text-indent: 0pt;text-align: left;">“Scrutiny 29.0”</p>
-<p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 253pt;text-indent: 0pt;text-align: left;">50,000</p>
-<p style="padding-top: 1pt;padding-left: 253pt;text-indent: 0pt;line-height: 112%;text-align: left;">19.5x23.5 inches Acrylic on canvas</p>
-
-<p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="210" height="365" alt="image" src="Catalog_files/Image_010.jpg"/></span></p>
 
 
-<p style="text-indent: 0pt;text-align: left;"><br/></p><header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Hafsa Zuberi</header>
+<p style="text-indent: 0pt;text-align: left;"><br/></p>
+<header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Hafsa Zuberi</header>
 
-<p style="padding-top: 4pt;padding-left: 7pt;text-indent: 0pt;text-align: left;">“Scrutiny 31.0”</p>
-<p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 7pt;text-indent: 0pt;text-align: left;">50,000</p><p style="padding-top: 1pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">18x32 inches Acrylic on canvas</p>
 
-<p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="342" height="462" alt="image" src="Catalog_files/Image_011.jpg"/>
-</span></p><p style="padding-top: 4pt;padding-left: 310pt;text-indent: 0pt;text-align: left;">“Behind the Barcode”</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 310pt;text-indent: 0pt;text-align: left;">Price: 32,000</p><p style="padding-top: 1pt;padding-left: 310pt;text-indent: 0pt;text-align: left;">Size: 32cm x 24cm</p><p style="padding-top: 1pt;padding-left: 310pt;text-indent: 0pt;line-height: 112%;text-align: left;">Materials: Color pencils and ink on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="366" height="454" alt="image" src="Catalog_files/Image_012.jpg"/></span></p><p style="padding-left: 331pt;text-indent: 0pt;text-align: left;">“Ode to Shah Jahan”</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 331pt;text-indent: 0pt;text-align: left;">Price: 50,000</p><p style="padding-top: 1pt;padding-left: 331pt;text-indent: 0pt;line-height: 112%;text-align: left;">Size: 20cm x 20cm Materials: Gouache and Ink</p><p style="padding-left: 331pt;text-indent: 0pt;line-height: 112%;text-align: left;">on paper cured with tea and eggwhite washes</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="410" height="580" alt="image" src="Catalog_files/Image_013.png"/></span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Momina Shah</header><p style="padding-top: 3pt;padding-left: 7pt;text-indent: 0pt;text-align: left;">“Routes/Roots”</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 7pt;text-indent: 0pt;text-align: left;">Price: 25,000</p><p style="padding-top: 1pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">Size: 57cm x 42cm Materials: Chalk pastels and Ink on paper</p><p style="text-indent: 0pt;text-align: left;"><span><img width="348" height="368" alt="image" src="Catalog_files/Image_014.jpg"/></span></p><p style="padding-top: 3pt;padding-left: 316pt;text-indent: 0pt;text-align: left;">“Mazar Sarif Jinae”</p><p style="padding-top: 1pt;padding-left: 316pt;text-indent: 0pt;line-height: 112%;text-align: left;">Price 35,000 size</p><p style="padding-left: 316pt;text-indent: 0pt;line-height: 112%;text-align: left;">materials : Acrylic on canvas sheet</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="354" height="358" alt="image" src="Catalog_files/Image_015.jpg"/></span></p><p style="padding-left: 319pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Dehli road” Price 40,000</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 319pt;text-indent: 0pt;text-align: left;">Size: 6x6’</p><p style="padding-top: 1pt;padding-left: 319pt;text-indent: 0pt;line-height: 112%;text-align: left;">Materials: acrylic on canvas panel</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="343" height="341" alt="image" src="Catalog_files/Image_016.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 308pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Androon lahore” Price 42000</p><p style="padding-left: 308pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Size 10x10’</p><p style="padding-top: 1pt;padding-left: 308pt;text-indent: 0pt;text-align: left;">Materials Acrylic on canvas</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="225" height="324" alt="image" src="Catalog_files/Image_017.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 235pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Apna shehr” Price 11000 Size 3x5’</p><p style="padding-left: 235pt;text-indent: 0pt;line-height: 12pt;text-align: left;">Materials: Acrylic on canson</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="265" height="265" alt="image" src="Catalog_files/Image_018.jpg"/></span></p><header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Emaan Mekael Koreshi</header><p style="padding-top: 4pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Akbar” Price 11,000 Size: 5x5’</p><p style="padding-left: 7pt;text-indent: 0pt;line-height: 12pt;text-align: left;">Materials: acrylic on canvas sheet</p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="264" height="376" alt="image" src="Catalog_files/Image_019.jpg"/></span></p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Garden of Eden” 80,000 pkr</p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 13pt;text-align: left;">52cm x 37cm</p><p style="padding-top: 1pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Oil paint, Mixed media</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="292" height="385" alt="image" src="Catalog_files/Image_020.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 278pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Punjab” 45,000</p><p style="padding-left: 278pt;text-indent: 0pt;line-height: 112%;text-align: left;">58cm x 43cm Acrylics</p><p style="text-indent: 0pt;text-align: left;"><span><img width="396" height="300" alt="image" src="Catalog_files/Image_021.jpg"/></span></p><p style="padding-top: 3pt;padding-left: 332pt;text-indent: 0pt;text-align: left;">“Life in the Wild”</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 332pt;text-indent: 0pt;text-align: left;">50,000</p><p style="padding-top: 1pt;padding-left: 332pt;text-indent: 0pt;line-height: 112%;text-align: left;">58cm x 43cm Acrylics</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="396" height="265" alt="image" src="Catalog_files/Image_022.jpg"/></span></p><p style="padding-left: 334pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Reincarnation” 65,000</p><p style="padding-left: 334pt;text-indent: 0pt;line-height: 112%;text-align: left;">2x3ft Acrylics</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-top: 4pt;padding-left: 319pt;text-indent: 0pt;text-align: justify;">“Because i got high”</p><p style="text-indent: 0pt;text-align: left;"><span><img width="369" height="278" alt="image" src="Catalog_files/Image_023.jpg"/></span></p><p style="padding-top: 1pt;padding-left: 319pt;text-indent: 0pt;line-height: 112%;text-align: justify;">Of self expression series Acrylic and oil paints on canvas”</p><p style="padding-left: 319pt;text-indent: 0pt;line-height: 12pt;text-align: left;">50,000</p><p style="padding-top: 1pt;padding-left: 319pt;text-indent: 0pt;line-height: 112%;text-align: left;">58cm x 43cm Acrylics</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 43pt;text-indent: 0pt;text-align: left;"><span><img width="293" height="448" alt="image" src="Catalog_files/Image_024.jpg"/></span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="334" height="249" alt="image" src="Catalog_files/Image_025.jpg"/></span></p><p style="padding-top: 8pt;padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Alienated public” 40,000</p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 13pt;text-align: left;">58cm x 43cm</p><p style="padding-top: 1pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Oil paint on canvas</p><p style="padding-top: 3pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Liebestraume(Dream of Love)” 120,000</p><p style="padding-left: 7pt;text-indent: 0pt;line-height: 13pt;text-align: left;">2x3</p><p style="padding-top: 1pt;padding-left: 7pt;text-indent: 0pt;text-align: left;">Oil Paint</p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="257" height="360" alt="image" src="Catalog_files/Image_026.jpg"/></span></p><p style="padding-top: 7pt;padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">The Lost City of Atlantis 58cm x 43cm</p><p style="padding-bottom: 3pt;padding-left: 0pt;text-indent: 0pt;line-height: 13pt;text-align: left;">Mixed Media, Oil Paints</p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="281" height="243" alt="image" src="Catalog_files/Image_027.jpg"/></span></p><p style="padding-top: 5pt;padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Soul” Price30,000 2x2.5</p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 12pt;text-align: left;">Mixed media, oil paints</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Serene Aneeq</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="317" height="397" alt="image" src="Catalog_files/Image_028.jpg"/></span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="600" height="222" alt="image" src="Catalog_files/Image_029.jpg"/></span></p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Do not forget me as you grow” 75,000</p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 13pt;text-align: left;">40cmx15cm</p><p style="padding-top: 1pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Pen and watercolour on paper</p><p style="padding-top: 4pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Sighs of my leaves and your lungs” Pkr 75,000</p><p style="padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">40cmx50cm Pen on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="208" height="344" alt="image" src="Catalog_files/Image_030.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 211pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Buried in the soil, we’ll meet again” 65,000</p><p style="text-indent: 0pt;text-align: left;"><span><img width="235" height="391" alt="image" src="Catalog_files/Image_031.jpg"/></span></p><p style="padding-left: 211pt;text-indent: 0pt;line-height: 112%;text-align: left;">13.8cmx21.8cm Pen on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 231pt;text-indent: 0pt;line-height: 112%;text-align: left;">The Failed Rescuer 65,000</p><p style="padding-left: 231pt;text-indent: 0pt;line-height: 13pt;text-align: left;">13.8cm x 21.8cm</p><p style="padding-top: 1pt;padding-left: 231pt;text-indent: 0pt;text-align: left;">Pen and watercolour on paper</p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="596" height="292" alt="image" src="Catalog_files/Image_032.jpg"/></span></p><p style="padding-top: 6pt;padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">Three Generations In One 75,000</p><p style="padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">30cm x 15cm Pen on paper</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Haiqa Ghazi</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 47pt;text-indent: 0pt;text-align: left;"><span><img width="470" height="328" alt="image" src="Catalog_files/Image_033.jpg"/></span></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="531" height="293" alt="image" src="Catalog_files/Image_034.jpg"/></span></p><p style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Untitled. 12,000. 10.2x6 inches.</p><p style="padding-top: 4pt;padding-left: 7pt;text-indent: 0pt;line-height: 112%;text-align: left;">untitled 15,000</p><p style="padding-left: 7pt;text-indent: 0pt;line-height: 13pt;text-align: left;">16.5x11.8in</p><p style="padding-top: 1pt;padding-left: 7pt;text-indent: 0pt;line-height: 111%;text-align: left;">marker on paper</p><p style="text-indent: 0pt;text-align: left;"><span><img width="252" height="301" alt="image" src="Catalog_files/Image_035.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 248pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 248pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 248pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="186" height="269" alt="image" src="Catalog_files/Image_036.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 192pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 192pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 192pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="224" height="260" alt="image" src="Catalog_files/Image_037.jpg"/></span></p><p style="padding-left: 209pt;text-indent: 0pt;line-height: 112%;text-align: left;">Untitled 9,000</p><p style="padding-left: 209pt;text-indent: 0pt;line-height: 13pt;text-align: left;">9.5x8 inches</p><p style="padding-top: 1pt;padding-left: 209pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="257" height="378" alt="image" src="Catalog_files/Image_038.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 223pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 223pt;text-indent: 0pt;text-align: left;">11.5x8 inches</p><p style="padding-top: 1pt;padding-left: 223pt;text-indent: 0pt;text-align: left;">Pen and ink on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="206" height="259" alt="image" src="Catalog_files/Image_039.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 203pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 203pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 203pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="159" height="233" alt="image" src="Catalog_files/Image_040.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 160pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 160pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 160pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><span><img width="230" height="271" alt="image" src="Catalog_files/Image_041.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 232pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 232pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 232pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="223" height="304" alt="image" src="Catalog_files/Image_042.jpg"/></span></p><p style="padding-left: 223pt;text-indent: 0pt;line-height: 112%;text-align: left;">Untitled 12,000</p><p style="padding-left: 223pt;text-indent: 0pt;line-height: 13pt;text-align: left;">11.5x8 inches</p><p style="padding-top: 1pt;padding-left: 223pt;text-indent: 0pt;text-align: left;">Pen and ink on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="236" height="323" alt="image" src="Catalog_files/Image_043.jpg"/></span></p><p style="padding-left: 241pt;text-indent: 0pt;line-height: 112%;text-align: left;">Untitled 9,000</p><p style="padding-left: 241pt;text-indent: 0pt;line-height: 13pt;text-align: left;">11.5x8 inches</p><p style="padding-top: 1pt;padding-left: 241pt;text-indent: 0pt;text-align: left;">Pen and ink on paper</p><p style="text-indent: 0pt;text-align: left;"><span><img width="267" height="392" alt="image" src="Catalog_files/Image_044.jpg"/></span></p><p style="padding-top: 3pt;padding-left: 264pt;text-indent: 0pt;line-height: 111%;text-align: left;">Untitled 6,000</p><p style="padding-left: 264pt;text-indent: 0pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 264pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="283" height="353" alt="image" src="Catalog_files/Image_045.jpg"/></span></p><p style="padding-top: 7pt;padding-left: 271pt;text-indent: 0pt;line-height: 112%;text-align: left;">Untitled 6,000</p><p style="padding-left: 271pt;text-indent: 0pt;line-height: 13pt;text-align: left;">6x8 inches</p><p style="padding-top: 1pt;padding-left: 271pt;text-indent: 0pt;text-align: left;">Marker and colours on paper</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Shanaya Khan</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="515" height="640" alt="image" src="Catalog_files/Image_046.png"/></span></p><p style="padding-top: 4pt;padding-left: 339pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Swans” 100,000</p><p style="padding-left: 339pt;text-indent: 0pt;line-height: 13pt;text-align: left;">4ftx3ft</p><p style="padding-top: 1pt;padding-left: 339pt;text-indent: 0pt;text-align: left;">Acrylic on canvas</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="padding-left: 394pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Barnacle baby” 30,000</p><p style="padding-left: 394pt;text-indent: 0pt;line-height: 111%;text-align: left;">12x18 inches Print</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="323" height="385" alt="image" src="Catalog_files/Image_047.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 334pt;text-indent: 0pt;line-height: 111%;text-align: left;">“Identity glitch” 15,000</p><p style="padding-left: 334pt;text-indent: 0pt;line-height: 112%;text-align: left;">12x 18 inches Acrylic on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="185" height="272" alt="image" src="Catalog_files/Image_048.jpg"/></span></p><p style="padding-left: 313pt;text-indent: 0pt;line-height: 111%;text-align: left;">“Sisters” 10,000</p><p style="padding-left: 313pt;text-indent: 0pt;line-height: 112%;text-align: left;">12x18 inches Acrylic on paper</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="443" height="307" alt="image" src="Catalog_files/Image_049.jpg"/></span></p><p style="padding-top: 10pt;padding-left: 388pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Finally sober” 10,000</p><p style="padding-left: 388pt;text-indent: 0pt;line-height: 13pt;text-align: left;">2x3ft</p><p style="padding-top: 1pt;padding-left: 388pt;text-indent: 0pt;text-align: left;">Acrylic on canvas</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="422" height="322" alt="image" src="Catalog_files/Image_050.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 376pt;text-indent: 0pt;line-height: 112%;text-align: left;">“rebirth” 25,000</p><p style="padding-left: 376pt;text-indent: 0pt;line-height: 13pt;text-align: left;">4x3ft</p><p style="padding-top: 1pt;padding-left: 376pt;text-indent: 0pt;text-align: left;">Acrylic on canvas</p><p style="text-indent: 0pt;text-align: left;"><span><img width="456" height="292" alt="image" src="Catalog_files/Image_051.jpg"/></span></p><p style="padding-top: 6pt;padding-left: 376pt;text-indent: 0pt;line-height: 111%;text-align: left;">“Aphrodite Reimagined” 30,000</p><p style="padding-left: 376pt;text-indent: 0pt;line-height: 112%;text-align: left;">2x3ft Acrylic</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="360" height="260" alt="image" src="Catalog_files/Image_052.jpg"/></span></p><p style="padding-top: 10pt;padding-left: 326pt;text-indent: 0pt;line-height: 111%;text-align: left;">“Dandelion” 50,000</p><p style="padding-left: 326pt;text-indent: 0pt;line-height: 111%;text-align: left;">3x4ft Acrylic</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Maheen Ahmer</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="379" height="432" alt="image" src="Catalog_files/Image_053.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 340pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Lady lotus” 8,000</p><p style="padding-left: 340pt;text-indent: 0pt;line-height: 112%;text-align: left;">11x15inches Digital print</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="334" height="380" alt="image" src="Catalog_files/Image_054.jpg"/></span></p><p style="padding-left: 306pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Loving frida” 4,000</p><p style="padding-left: 306pt;text-indent: 0pt;line-height: 112%;text-align: left;">12x10inches Digital print</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="408" height="408" alt="image" src="Catalog_files/Image_055.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 349pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Giver of Life” 4,000</p><p style="padding-left: 349pt;text-indent: 0pt;line-height: 112%;text-align: left;">12x12 inches Digital print</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Zainab Hussain</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="267" height="379" alt="image" src="Catalog_files/Image_056.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 255pt;text-indent: 0pt;line-height: 111%;text-align: left;">“a study of diaphanous bodies 1” 12,000</p><p style="padding-left: 255pt;text-indent: 0pt;line-height: 112%;text-align: left;">5.8x8.3 inches Digital Print</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="235" height="337" alt="image" src="Catalog_files/Image_057.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 232pt;text-indent: 0pt;line-height: 111%;text-align: left;">“a study of diaphanous bodies 2” 12,000</p><p style="padding-left: 232pt;text-indent: 0pt;line-height: 112%;text-align: left;">5.8x8.3 inches Digital Print</p><p style="text-indent: 0pt;text-align: left;"><span><img width="380" height="363" alt="image" src="Catalog_files/Image_058.jpg"/></span></p><p style="padding-top: 3pt;padding-left: 341pt;text-indent: 3pt;line-height: 111%;text-align: left;">“Anuket” 32,000</p><p style="padding-left: 341pt;text-indent: 0pt;text-align: left;">24inchesx24inches</p><p style="padding-top: 1pt;padding-left: 341pt;text-indent: 0pt;line-height: 112%;text-align: left;">Uv and holographic print on acrylic</p><header style="padding-top: 3pt;padding-left: 0pt;text-indent: 0pt;text-align: left;">Amna Faisal Mir</header><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="323" height="274" alt="image" src="Catalog_files/Image_059.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 298pt;text-indent: 0pt;text-align: left;">Rajasthani Miniature 40,000</p><p style="padding-left: 298pt;text-indent: 0pt;text-align: left;">30.1x35.2cm</p><p style="padding-left: 298pt;text-indent: 0pt;text-align: left;">Gouache on Wasli</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="250" height="333" alt="image" src="Catalog_files/Image_060.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 249pt;text-indent: 0pt;text-align: left;">Safaid Qalam (Persian Study) 35,000</p><p style="padding-left: 249pt;text-indent: 0pt;text-align: left;">22.5x27.6cm</p><p style="padding-left: 249pt;text-indent: 0pt;text-align: left;">Safaida on Wasli</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="325" height="361" alt="image" src="Catalog_files/Image_061.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 258pt;text-indent: 0pt;text-align: left;">Mughal Court Miniature 70,000</p><p style="padding-left: 258pt;text-indent: 0pt;text-align: left;">41.5x41.5cm</p><p style="padding-left: 258pt;text-indent: 0pt;text-align: left;">Gouache and Gold Foil on Wasli</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="289" height="380" alt="image" src="Catalog_files/Image_062.jpg"/></span></p><p style="padding-left: 273pt;text-indent: 0pt;text-align: left;">Neem Rung 30,000</p><p style="padding-left: 273pt;text-indent: 0pt;text-align: left;">14x18.9cm</p><p style="padding-left: 273pt;text-indent: 0pt;text-align: left;">Watercolor and Gouache on Wasli</p><p style="text-indent: 0pt;text-align: left;"><br/></p><p style="text-indent: 0pt;text-align: left;"><span><img width="316" height="371" alt="image" src="Catalog_files/Image_063.jpg"/></span></p><p style="padding-top: 4pt;padding-left: 292pt;text-indent: 0pt;text-align: left;">Pahari Miniature 40,000</p><p style="padding-left: 292pt;text-indent: 0pt;text-align: left;">8.6x11cm</p><p style="padding-left: 292pt;text-indent: 0pt;text-align: left;">Gouache on Wasli</p>
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img width="270" height="365" alt="image" src="Catalog_files/Image_011.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: -60px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Behind the Barcode”<br>32,000<br>32cm x 24cm<br>Color pencils and ink on paper</p>
+            
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Behind the Barcode - Hafsa Zuberi')">Send an Inquiry</button>
+            
+                        </div> 
+                    </div>
+
+
+
+ <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img width="294" height="365" alt="image" src="Catalog_files/Image_012.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: -20px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Ode to Shah Jahan”<br>50,000<br>20cm x 20cm<br>Gouache and Ink on paper<br>cured with tea and eggwhite washes</p>
+            
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Ode to Shah Jahan - Hafsa Zuberi')">Send an Inquiry</button>
+                        </div> 
+                    </div>
+
+<header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Momina Shah</header>
+
+        <div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img width="258" height="365" alt="image" src="Catalog_files/Image_013.png" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: -40px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Routes/Roots”<br>25,000<br>57cm x 42cm<br>Chalk pastels and Ink on paper</p>
+            
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Routes/Roots - Momina Shah')">Send an Inquiry</button>
+                        </div> 
+                    </div>
+
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+        <div class="art-left">
+            <p><span><img width="348" height="368" alt="image" src="Catalog_files/Image_014.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+            </div>
+    
+        <div class="art-right" style="margin-left: 0px;">
+            <p style="line-height: 1.5; margin-top: -40px;">“Mazar Sarif Jinae”<br>35,000<br>Acrylic on canvas sheet</p>
+            
+            <button style="margin-left: -70px;" onclick="redirectToContactPage('Mazar Sarif Jinae - Momina Shah')">Send an Inquiry</button>
+                        </div> 
+                    </div>
+
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img width="354" height="358" alt="image" src="Catalog_files/Image_015.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Dehli Road”<br>40,000<br>6 x 6 inches<br>Acrylic on canvas panel</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Dehli road - Momina Shah')">Send an Inquiry</button>
+</div> 
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_016.jpg" style="margin-left: -20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Androon Lahore”<br>42,000<br>10 x 10 inches<br>Acrylic on canvas</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Androon Lahore - Momina Shah')">Send an Inquiry</button>
+</div> 
+</div>
+                                    
+
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_017.jpg" style="margin-left: 20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Apna Shehr”<br>11,000<br>3 x 5 inches<br>Acrylic on canson</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Apna Shehr - Momina Shah')">Send an Inquiry</button>
+</div> 
+</div>
+
+<header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Emaan Mekael Koreshi</header>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img width="264" height="376" alt="image" src="Catalog_files/Image_018.jpg" style="margin-left: 20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Akbar”<br>11,000<br>5 x 5 inches<br>Acrylic on canvas sheet</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Akbar - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div> 
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_019.jpg" style="margin-left: 20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Garden of Eden”<br>80,000<br>52cm x 37cm<br>Oil paint, Mixed media</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Garden of Eden - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div> 
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_020.jpg" style="margin-left: 20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Punjab”<br>45,000<br>58cm x 43cm<br>Acrylics</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Punjab - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div> 
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_021.jpg" style="margin-left: 20px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Life in the Wild”<br>50,000<br>58cm x 43cm<br>Acrylics</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Life in the Wild - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div>
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_022.jpg" style="margin-left: 0px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Reincarnation”<br>65,000<br>2x3ft<br>Acrylics</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Reincarnation - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div>
+</div>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+    <div class="art-left">
+    <p><span><img alt="image" src="Catalog_files/Image_023.jpg" style="margin-left: 0px; margin-top: -40px;"/></span></p>
+     </div>
+                    
+    <div class="art-right" style="margin-left: 0px;">
+    <p style="line-height: 1.5; margin-top: -40px;">“Because i got high”<br>50,000<br>58cm x 43cm<br>Acrylics</p>
+                            
+    <button style="margin-left: -70px;" onclick="redirectToContactPage('Because i got high - Emaan Mekael Koreshi')">Send an Inquiry</button>
+</div>
+</div>
+
+<header style="padding-left: 0pt;text-indent: 0pt;text-align: left;">Haiqa Ghazi</header>
+
+<div class="art-box" style="margin-top: 0px; margin-right: -250px;">
+
+</div>
+
+<p style="padding-left: 43pt;text-indent: 0pt;text-align: left;"><span>
+    <img width="293" height="448" alt="image" src="Catalog_files/Image_024.jpg"/></span></p>
+    <p style="text-indent: 0pt;text-align: left;"><br/></p>
+    <p style="text-indent: 0pt;text-align: left;"><span>
+        <img width="334" height="249" alt="image" src="Catalog_files/Image_025.jpg"/>
+    </span></p>
+    <p style="padding-top: 8pt;padding-left: 0pt;text-indent: 0pt;line-height: 112%;text-align: left;">“Alienated public” 40,000</p>
 
 
 </body></html>
