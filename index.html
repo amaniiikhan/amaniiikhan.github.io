@@ -21,78 +21,75 @@
             </ul>
         </div>
 
-        <div class="art-box" style="padding-bottom: 100px; height:fit-content; margin-top: -70px;">
-            <div class="art-left" style="align-content: baseline; margin-top: 23px;">
-                <div class="flyercontainer">
-                    <img src="Catalog_files/invite.jpg" alt="image" style="width:100%; margin-top: 60px; margin-left:50px;">
-                    <div class="top-left" style="color:black; font-size: 35px; font-weight: bold; margin-left: 75px;">An Eye for Beauty</div>
+        <div class="art-box" style="margin-left: 100px; outline-width: 3px; outline-color: black;">
+            <div class="art-left">
+              <div class="flyercontainer">
+                <div id="stage" style="background-size:contain;">
+                    <a href="Catalog_files/1.jpeg"><img src="Catalog_files/1.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/2.jpeg"><img src="Catalog_files/2.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/3.jpeg"><img src="Catalog_files/3.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/4.jpeg"><img src="Catalog_files/4.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/6.jpeg"><img src="Catalog_files/6.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/7.jpeg"><img src="Catalog_files/7.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/8.jpeg"><img src="Catalog_files/8.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/11.jpeg"><img src="Catalog_files/11.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                    <a href="Catalog_files/12.jpeg"><img src="Catalog_files/12.jpeg" alt="image" style="width: 95%; aspect-ratio : 1 / 1;"></a>
+                  </div>
                 </div>
+                <style>
+
+                  #stage {
+                    margin: 1em auto;
+                    width: 382px;
+                    height: 292px;
+                  }
+                  #stage a {
+                    position: absolute;
+                  }
+                  #stage a img {
+                    padding: 10px;
+                  }
+                  #stage a:nth-of-type(1) {
+                    animation-name: fader;
+                    animation-delay: 4s;
+                    animation-duration: 1s;
+                    z-index: 20;
+                  }
+                  #stage a:nth-of-type(2) {
+                    z-index: 10;
+                  }
+                  #stage a:nth-of-type(n+3) {
+                    display: none;
+                  }
+                  @keyframes fader {
+                    from { opacity: 1.0; }
+                    to   { opacity: 0.0; }
+                  }
+                </style>
+
+
+            <script>
+
+              window.addEventListener("DOMContentLoaded", function(e) {
+
+                // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
+                // Please acknowledge use of this code by including this header.
+
+                var stage = document.getElementById("stage");
+                var fadeComplete = function(e) { stage.appendChild(arr[0]); };
+                var arr = stage.getElementsByTagName("a");
+                for(var i=0; i < arr.length; i++) {
+                  arr[i].addEventListener("animationend", fadeComplete, false);
+                }
+
+              }, false);
+
+            </script>
+
             </div>
-        <div class="art-right" style="text-align: right; margin-left: -70px;">
-        <div class="flyercontainer">
-        <div id="stage" style="background-size:contain;">
-            <a href="Catalog_files/1.jpeg"><img src="Catalog_files/1.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/2.jpeg"><img src="Catalog_files/2.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/3.jpeg"><img src="Catalog_files/3.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/4.jpeg"><img src="Catalog_files/4.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/6.jpeg"><img src="Catalog_files/6.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/7.jpeg"><img src="Catalog_files/7.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/8.jpeg"><img src="Catalog_files/8.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/11.jpeg"><img src="Catalog_files/11.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-            <a href="Catalog_files/12.jpeg"><img src="Catalog_files/12.jpeg" alt="image" style="width: 100%; aspect-ratio : 1 / 1;"></a>
-          </div>
+        <div class="art-right" style="margin-top: 70px; margin-left: -120px;">
+          <h1 style="font-size: 35px;">An Eye for Beauty</h1>
         </div>
-
-          <style>
-
-            #stage {
-              margin: 1em auto;
-              width: 382px;
-              height: 292px;
-            }
-            #stage a {
-              position: absolute;
-            }
-            #stage a img {
-              padding: 10px;
-            }
-            #stage a:nth-of-type(1) {
-              animation-name: fader;
-              animation-delay: 4s;
-              animation-duration: 1s;
-              z-index: 20;
-            }
-            #stage a:nth-of-type(2) {
-              z-index: 10;
-            }
-            #stage a:nth-of-type(n+3) {
-              display: none;
-            }
-            @keyframes fader {
-              from { opacity: 1.0; }
-              to   { opacity: 0.0; }
-            }
-          </style>
-
-
-<script>
-
-    window.addEventListener("DOMContentLoaded", function(e) {
-  
-      // Original JavaScript code by Chirp Internet: www.chirpinternet.eu
-      // Please acknowledge use of this code by including this header.
-  
-      var stage = document.getElementById("stage");
-      var fadeComplete = function(e) { stage.appendChild(arr[0]); };
-      var arr = stage.getElementsByTagName("a");
-      for(var i=0; i < arr.length; i++) {
-        arr[i].addEventListener("animationend", fadeComplete, false);
-      }
-  
-    }, false);
-  
-  </script>
-
     </div>
     </div>
 
